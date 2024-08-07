@@ -27,3 +27,9 @@ This opens a web page where you login as your org user
 6) Download code
 Select manifest -> package.xml , right click and select "Retrieve this Source from Org"
 Once done you should have all components etc in your project.
+
+7) Copy the code in this repository to your new project
+
+8) Log in to salesforce and enter setup
+
+9) Search for "Change data capture" and add the Quote object to the selected entities 
