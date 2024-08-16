@@ -39,9 +39,11 @@ export default class QuoteIframeIncludingPushTopic extends LightningElement {
 
     registerSubscribe() {
         const changeEventCallback = changeEvent => {
-            console.log( 'Update received : ', JSON.stringify( changeEvent ) );
-            //eval("$A.get('e.force:refreshView').fire();");
-            this.dispatchEvent(new RefreshEvent());
+            const changeEventString = JSON.stringify( changeEvent );
+            console.log( 'Update received : ', changeEventString );
+            if(changeEventString.indexOf(this.recordId)>0){
+                this.dispatchEvent(new RefreshEvent());
+            }
         };
 
         // Sets up subscription and callback for change events
