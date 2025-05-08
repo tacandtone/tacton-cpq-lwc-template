@@ -1,45 +1,76 @@
 # To set up and deploy this LWC
 Here is a quick how-to for getting started with updating the code for your org.
  
-1) Install VsCode
-https://code.visualstudio.com/Download
-Once installed close it.
- 
-2) Install Salesforce DX CLI
-https://developer.salesforce.com/tools/sfdxcli
- 
-3) Install Salesforce Extension Pack in VsCode
-Open VsCode and press "Ctrl + Shift + X" and search for "Salesforce Extension Pack" and click the "Install button"
- 
-4) Create project
- 
-In VsCode press "Ctrl + Shift + P" and select "SFDX: Create project with Manifest"
-Choose empty
-Give it a name
-Select where to store the code
- 
-5) Connect project with your Salesforce Org
-Press "Ctrl + Shift + P" and select "SFDX: Authorize an Org"
-Select org type (probably Production, or if you have defined it in sfdx-project.json then "Project Default")
-Give it an alias
- 
-This opens a web page where you login as your org user
- 
-6) Download code
-Select manifest -> package.xml , right click and select "Retrieve this Source from Org"
-Once done you should have all components etc in your project.
-like 1
-Download Visual Studio Code - Mac, Linux, Windows
-Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows. Download Visual Studio Code to experience a redefined code editor, optimized for building and debug...
-star 1
-Download Visual Studio Code - Mac, Linux, Windows
-Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows. Download Visual Studio Code to experience a redefined code editor, optimized for building and debug
+# Salesforce VSCode Project Setup Guide
 
-7) Copy the code
-Copy the code from the Tacton CPQ Embedded Package folder into your new project
+Follow these steps to set up a Salesforce project using Visual Studio Code and the Salesforce CLI.
 
-8) Deploy
-Select manifest -> package.xml , right click and select "SDX: Deploy Source in Manifest to Org"
+---
+
+## 1. Install Visual Studio Code
+Download and install VSCode from the official website:  
+[https://code.visualstudio.com/Download](https://code.visualstudio.com/Download)
+
+> Once installed, you can close it.
+
+---
+
+## 2. Install Salesforce DX CLI
+Download and install the Salesforce CLI:  
+[https://developer.salesforce.com/tools/sfdxcli](https://developer.salesforce.com/tools/sfdxcli)
+
+---
+
+## 3. Install Salesforce Extension Pack in VSCode
+1. Open VSCode.
+2. Press `Ctrl + Shift + X` to open the Extensions view.
+3. Search for **Salesforce Extension Pack**.
+4. Click **Install**.
+
+---
+
+## 4. Create a New Project
+1. Press `Ctrl + Shift + P` in VSCode.
+2. Select `SFDX: Create Project with Manifest`.
+3. Choose **Empty**.
+4. Provide a project name.
+5. Select the directory to store the project.
+
+---
+
+## 5. Connect Your Project with a Salesforce Org
+1. Press `Ctrl + Shift + P`.
+2. Select `SFDX: Authorize an Org`.
+3. Choose the org type (e.g., **Production** or use the **Project Default** defined in `sfdx-project.json`).
+4. Provide an alias for the org.
+
+> This will open a browser window where you can log in to your Salesforce org.
+
+---
+
+## 6. Retrieve Code from Salesforce Org
+1. In the **manifest** folder, right-click `package.xml`.
+2. Select **Retrieve This Source from Org**.
+
+> This will pull all components from the org into your local project.
+
+---
+
+## 7. Copy Tacton CPQ Code
+Copy the code from the **Tacton CPQ Embedded Package** folder into your new project directory.
+
+---
+
+## 8. Deploy Code to Org
+1. In the **manifest** folder, right-click `package.xml`.
+2. Select **SFDX: Deploy Source in Manifest to Org**.
+
+---
+
+## Notes
+- Visual Studio Code is available for Windows, macOS, and Linux.
+- The setup process is intended for developers working with the Salesforce platform, including Tacton CPQ integration.
+
 
 
 ## ✅ Post-Installation Steps
