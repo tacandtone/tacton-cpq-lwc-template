@@ -12,9 +12,6 @@ export default class QuoteIframeIncludingPushTopic extends LightningElement {
     @api scrolling;
     @track quote;
     
-
-    @track channelQuoteLineItemName = '/topic/QuoteLineItem';
-    @track channelQuoteDocumentName = '/topic/QuoteDocument';
     @track quoteChangeEvent = '/data/QuoteChangeEvent';
     @track strResponse = '';
     loading = false;
@@ -39,11 +36,11 @@ export default class QuoteIframeIncludingPushTopic extends LightningElement {
 
     registerSubscribe() {
         const changeEventCallback = changeEvent => {
-            const changeEventString = JSON.stringify( changeEvent );
-            console.log( 'Update received : ', changeEventString );
-            if(changeEventString.indexOf(this.recordId)>0){
+            const eventData = JSON.stringify( changeEvent );
+            console.log( 'Update received : ', eventData );
+            if(eventData.indexOf(this.recordId)){
                 this.dispatchEvent(new RefreshEvent());
-            }
+             }
         };
 
         // Sets up subscription and callback for change events
@@ -53,8 +50,6 @@ export default class QuoteIframeIncludingPushTopic extends LightningElement {
     }
 
     renderedCallback() {
-        
-        var contextPlug = this;
         const spinnerContainer = this.template.querySelector('.slds-spinner_container');
         const containerElem = this.template.querySelector('.iframe-container');
 
